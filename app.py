@@ -1,19 +1,15 @@
-from selenium.webdriver import Firefox, ActionChains, Keys
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.by import By
-import os
-from glob import glob
 import ctypes
+from glob import glob
+import os
+from selenium.webdriver import Firefox, ActionChains, Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
+import time
 
-# TODO: Setup Python script as cron job
-import time # TODO: replace with await element function
-"""
-from selenium.webdriver.support.ui import WebDriverWait
-"""
 
 DOWNLOAD_DIR = r"C:\Users\skyli\Downloads"
 WALLPAPER_DIR = r"C:\Users\skyli\Pictures"
-
+RESOLUTION = (3440, 1440)
 SLIDER_URL = r"https://rammb-slider.cira.colostate.edu/?sat=himawari&sec=full_disk&x=10868&y=16056&z=3&angle=0&im=18&ts=1&st=0&et=0&speed=170&motion=rock&refresh=1&maps%5Bborders%5D=slate&lat=0&p%5B0%5D=natural_color&p%5B1%5D=band_13&opacity%5B0%5D=1&opacity%5B1%5D=0.5&pause=20230221074000&slider=-1&hide_controls=0&mouse_draw=0&follow_feature=0&follow_hide=0&s=rammb-slider&draw_color=FFD700&draw_width=6"
 
   
@@ -41,7 +37,7 @@ def main():
     options.page_load_strategy = 'eager'
     options.add_argument('-headless')
     driver = Firefox(options=options)
-    driver.set_window_size(3440,1440+45+40) # 45px header + 40px otherwise it breaks :/
+    driver.set_window_size(RESOLUTION[0],RESOLUTION[1]+45+40) # 45px header + 40px otherwise it breaks :/
     driver.implicitly_wait(60)
     driver.get(SLIDER_URL)
     
