@@ -30,6 +30,8 @@
 
    - Every 10 mins
 
+   - Set user as `SYSTEM` (runs in background)
+
 ## Example
 
 <a href="https://ibb.co/xHNkQ2M"><img src="https://i.ibb.co/GTq6jdV/Screenshot-1.png" alt="Desktop with Earth Wallpaper as viewed from Himawari-9" border="0"></a>
