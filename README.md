@@ -10,27 +10,7 @@
 
 5. Setup a cron job for every 10 mins.
 
-   - Task Scheduler
-
-   - Basic Task
-
-   - on login
-
-   - Start a program
-
-     * program: `path\to\python3.exe` (MS Store: `C:\Users\<user>\AppData\Local\Microsoft\WindowsApps\python3.exe` where `<user>` is your username)
-
-     * arguments: `app.py`
-
-     * start in: `path\to\repo`
-
-   - finish
-
-   - edit Advanced Settings
-
-   - Every 10 mins
-
-   - Set user as `SYSTEM` (runs in background)
+   - I used Task Scheduler and it was annoying.
 
 ## Example
 
